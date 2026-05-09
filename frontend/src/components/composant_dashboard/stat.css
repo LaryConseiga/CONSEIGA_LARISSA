@@ -1,0 +1,61 @@
+/* ── Stat card ──────────────────────────────────────────── */
+.stat-card {
+  background: #fff;
+  border-radius: var(--app-radius-lg, 0.75rem) !important;
+  box-shadow: var(--app-shadow-sm, 0 1px 4px rgba(0,0,0,0.05));
+  border-top: 3px solid var(--app-primary, #dc3545) !important;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--app-shadow, 0 4px 16px rgba(0,0,0,0.09)) !important;
+}
+
+/* Cercle icône */
+.stat-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 0.65rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--app-primary-bg, rgba(220,53,69,0.09));
+  color: var(--app-primary, #dc3545);
+  font-size: 1.4rem;
+  transition: background 0.15s ease;
+}
+
+.stat-card:hover .stat-card-icon {
+  background: var(--app-primary-bg-hover, rgba(220,53,69,0.14));
+}
+
+/* Texte */
+.stat-card-body {
+  min-width: 0;
+  flex: 1;
+}
+
+.stat-card-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--app-text-muted, #6c757d);
+  line-height: 1.2;
+}
+
+.stat-card-value {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--app-primary, #dc3545);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.stat-card-desc {
+  font-size: 0.76rem;
+  color: var(--app-text-muted, #6c757d);
+  line-height: 1.3;
+}

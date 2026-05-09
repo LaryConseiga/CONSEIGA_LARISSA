@@ -1,0 +1,301 @@
+/* ============================================================
+   PROFIL PAGE — Institut 2iE
+   ============================================================ */
+
+.profil-page {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: var(--app-page-bg, #f4f6f9);
+  min-height: 0;
+}
+
+.profil-page-topbar {
+  background: var(--app-page-bg, #f4f6f9);
+  border-bottom: 1px solid var(--app-border, #e9ecef);
+}
+
+.profil-body {
+  flex: 1;
+}
+
+/* ── Carte principale ─────────────────────────────────────── */
+.profil-card {
+  background: #fff;
+  border-radius: var(--app-radius-lg, 0.75rem);
+  box-shadow: var(--app-shadow, 0 2px 12px rgba(0,0,0,0.07));
+  overflow: hidden;
+  max-width: 560px;
+  margin: 1.75rem auto 0;
+}
+
+/* ── Bandeau couverture ───────────────────────────────────── */
+.profil-cover {
+  height: 85px;
+  background: linear-gradient(
+    135deg,
+    var(--app-primary, #dc3545) 0%,
+    var(--app-primary-deeper, #8c1f2a) 100%
+  );
+  position: relative;
+}
+
+/* Motif décoratif sur le bandeau */
+.profil-cover::before,
+.profil-cover::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+}
+
+.profil-cover::before {
+  width: 180px;
+  height: 180px;
+  top: -50px;
+  right: -40px;
+}
+
+.profil-cover::after {
+  width: 110px;
+  height: 110px;
+  bottom: -40px;
+  left: 30px;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ── Zone identité (avatar + nom) ─────────────────────────── */
+.profil-identity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 1.5rem 1.25rem;
+  margin-top: -46px; /* fait remonter l'avatar sur le bandeau */
+}
+
+/* ── Avatar ───────────────────────────────────────────────── */
+.profil-avatar {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--app-primary, #dc3545) 0%,
+    var(--app-primary-dark, #b02a37) 100%
+  );
+  color: #fff;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 16px rgba(220, 53, 69, 0.35);
+  flex-shrink: 0;
+  user-select: none;
+}
+
+/* ── Texte d'identité ─────────────────────────────────────── */
+.profil-identity-text {
+  margin-top: 0.75rem;
+}
+
+.profil-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--app-text, #1a1d23);
+  letter-spacing: -0.02em;
+  margin: 0 0 0.4rem;
+}
+
+.profil-role-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  background: var(--app-primary-bg, rgba(220,53,69,0.09));
+  color: var(--app-primary-dark, #b02a37);
+  border: 1px solid rgba(220, 53, 69, 0.2);
+  letter-spacing: 0.01em;
+}
+
+/* ── Séparateur ───────────────────────────────────────────── */
+.profil-divider {
+  margin: 0 1.5rem;
+  border-color: var(--app-border, #e9ecef);
+  opacity: 1;
+}
+
+/* ── Titre de section ─────────────────────────────────────── */
+.profil-section-title {
+  padding: 1rem 1.5rem 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--app-text-muted, #6c757d);
+  display: flex;
+  align-items: center;
+}
+
+/* ── Liste des infos ──────────────────────────────────────── */
+.profil-info-list {
+  padding: 0 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+/* ── Ligne d'info ─────────────────────────────────────────── */
+.profil-info-row {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.75rem 0.5rem;
+  border-radius: var(--app-radius, 0.5rem);
+  transition: background var(--app-transition, 0.15s ease);
+}
+
+.profil-info-row:hover {
+  background: var(--app-primary-bg, rgba(220,53,69,0.05));
+}
+
+.profil-info-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 0.5rem;
+  background: var(--app-primary-bg, rgba(220,53,69,0.08));
+  color: var(--app-primary, #dc3545);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.profil-info-body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.profil-info-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--app-text-muted, #6c757d);
+  line-height: 1.2;
+}
+
+.profil-info-value {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--app-text, #1a1d23);
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* ── Pied de carte ────────────────────────────────────────── */
+.profil-card-footer {
+  margin: 0.5rem 1.5rem 1.25rem;
+  padding: 0.75rem 1rem;
+  background: var(--app-border-light, #f8f9fa);
+  border-radius: var(--app-radius, 0.5rem);
+  border: 1px solid var(--app-border, #e9ecef);
+}
+
+.profil-footer-note {
+  font-size: 0.78rem;
+  color: var(--app-text-muted, #6c757d);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.35rem;
+  line-height: 1.45;
+}
+
+.profil-footer-note .bi-lock-fill {
+  color: var(--app-primary, #dc3545);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ── Squelette de chargement ──────────────────────────────── */
+.profil-loading {
+  background: #fff;
+  border-radius: var(--app-radius-lg, 0.75rem);
+  box-shadow: var(--app-shadow, 0 2px 12px rgba(0,0,0,0.07));
+  overflow: hidden;
+  max-width: 560px;
+  margin: 1.75rem auto 0;
+}
+
+.profil-loading-cover {
+  height: 85px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s infinite;
+}
+
+.profil-loading-body {
+  padding: 0 1.5rem 2rem;
+}
+
+.profil-skeleton {
+  border-radius: 6px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s infinite;
+}
+
+.profil-skeleton--avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  margin-top: -44px;
+  border: 4px solid #fff;
+}
+
+.profil-skeleton--title {
+  width: 160px;
+  height: 20px;
+}
+
+.profil-skeleton--sub {
+  width: 200px;
+  height: 14px;
+}
+
+@keyframes skeleton-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 575.98px) {
+  .profil-card,
+  .profil-loading {
+    margin-top: 1.25rem;
+    border-radius: var(--app-radius, 0.5rem);
+  }
+
+  .profil-cover {
+    height: 90px;
+  }
+
+  .profil-avatar {
+    width: 76px;
+    height: 76px;
+    font-size: 1.45rem;
+    margin-top: -38px;
+  }
+
+  .profil-name {
+    font-size: 1.1rem;
+  }
+}

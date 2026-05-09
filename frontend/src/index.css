@@ -1,0 +1,101 @@
+/* ============================================================
+   APP DESIGN SYSTEM — Institut 2iE
+   Palette principale : Rouge #dc3545 / Blanc #ffffff
+   ============================================================ */
+
+:root {
+  /* Couleurs principales */
+  --app-primary:         #dc3545;
+  --app-primary-dark:    #b02a37;
+  --app-primary-deeper:  #8c1f2a;
+  --app-primary-light:   #f8d7da;
+  --app-primary-bg:      rgba(220, 53, 69, 0.07);
+  --app-primary-bg-hover:rgba(220, 53, 69, 0.12);
+
+  /* Mise en page */
+  --app-sidebar-width:   280px;
+  --app-page-bg:         #f4f6f9;
+  --app-card-bg:         #ffffff;
+  --app-border:          #e9ecef;
+  --app-border-light:    #f1f3f5;
+
+  /* Typographie */
+  --app-text:            #1a1d23;
+  --app-text-secondary:  #495057;
+  --app-text-muted:      #6c757d;
+  --app-text-placeholder:#adb5bd;
+
+  /* Ombres */
+  --app-shadow-xs:  0 1px 2px rgba(0,0,0,0.04);
+  --app-shadow-sm:  0 1px 4px rgba(0,0,0,0.05), 0 2px 6px rgba(0,0,0,0.03);
+  --app-shadow:     0 2px 10px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.04);
+  --app-shadow-lg:  0 4px 24px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.05);
+
+  /* Tokens UI */
+  --app-radius:     0.5rem;
+  --app-radius-lg:  0.75rem;
+  --app-transition: 0.15s ease;
+
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--app-text);
+  background: var(--app-page-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Racine ───────────────────────────────────────────────── */
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  text-align: left;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--app-page-bg);
+}
+
+/* ── Override global : card-header bg-dark → rouge marque ── */
+.card > .card-header.bg-dark,
+.card > .card-header.bg-dark.text-white {
+  background-color: var(--app-primary) !important;
+  background-image: linear-gradient(135deg, var(--app-primary) 0%, var(--app-primary-dark) 100%) !important;
+  color: #fff !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.10) !important;
+}
+
+/* ── Boutons Bootstrap : focus ring rouge ─────────────────── */
+.btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.25) !important;
+}
+
+/* ── Form controls : focus rouge ─────────────────────────── */
+.form-control:focus,
+.form-select:focus {
+  border-color: rgba(220, 53, 69, 0.5) !important;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.15) !important;
+}
+
+/* ── Scrollbar fine et discrète ──────────────────────────── */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #dee2e6 transparent;
+}
+*::-webkit-scrollbar         { width: 5px; height: 5px; }
+*::-webkit-scrollbar-track   { background: transparent; }
+*::-webkit-scrollbar-thumb   { background: #ced4da; border-radius: 3px; }
+*::-webkit-scrollbar-thumb:hover { background: #adb5bd; }
+
+/* ── Transitions générales pour les cartes ───────────────── */
+.card {
+  transition: box-shadow var(--app-transition), transform var(--app-transition);
+}

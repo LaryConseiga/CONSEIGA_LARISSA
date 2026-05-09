@@ -1,0 +1,178 @@
+/* ============================================================
+   TROMBINOSCOPE — Institut 2iE
+   ============================================================ */
+
+.trombi-grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* ── Carte ────────────────────────────────────────────────── */
+.trombi-carte {
+  background: #fff;
+  border-radius: var(--app-radius-lg, 0.75rem);
+  box-shadow: var(--app-shadow, 0 2px 10px rgba(0,0,0,0.07));
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.trombi-carte:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.11);
+}
+
+/* ── Zone avatar ──────────────────────────────────────────── */
+.trombi-avatar-zone {
+  background: linear-gradient(
+    135deg,
+    var(--app-primary, #dc3545) 0%,
+    var(--app-primary-deeper, #8c1f2a) 100%
+  );
+  padding: 1.25rem 1rem 1rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.trombi-avatar {
+  border: 3px solid #fff !important;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+/* ── Infos ────────────────────────────────────────────────── */
+.trombi-infos {
+  padding: 0.75rem 1rem 0.5rem;
+  flex: 1;
+  text-align: center;
+}
+
+.trombi-nom {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--app-text, #1a1d23);
+  margin: 0 0 0.1rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.trombi-prenoms {
+  font-size: 0.78rem;
+  color: var(--app-text-muted, #6c757d);
+  margin: 0 0 0.5rem;
+}
+
+.trombi-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.18rem 0.6rem;
+  border-radius: 999px;
+  background: var(--app-primary-bg, rgba(220,53,69,0.09));
+  color: var(--app-primary-dark, #b02a37);
+  border: 1px solid rgba(220,53,69,0.18);
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.02em;
+}
+
+/* ── Détails ──────────────────────────────────────────────── */
+.trombi-details {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.trombi-details li {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  color: var(--app-text-muted, #6c757d);
+  min-width: 0;
+}
+
+.trombi-detail-icon {
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  width: 16px;
+  text-align: center;
+}
+
+.trombi-detail-val {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ── Boutons d'action ─────────────────────────────────────── */
+.trombi-actions {
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.6rem 0.75rem 0.75rem;
+  border-top: 1px solid var(--app-border, #e9ecef);
+  margin-top: auto;
+}
+
+.trombi-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.35rem 0.5rem;
+  border-radius: var(--app-radius, 0.5rem);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+
+.trombi-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.trombi-btn-edit {
+  background: rgba(220,53,69,0.07);
+  color: var(--app-primary-dark, #b02a37);
+  border-color: rgba(220,53,69,0.2);
+}
+
+.trombi-btn-edit:hover:not(:disabled) {
+  background: rgba(220,53,69,0.15);
+}
+
+.trombi-btn-delete {
+  background: transparent;
+  color: var(--app-text-muted, #6c757d);
+  border-color: var(--app-border, #dee2e6);
+}
+
+.trombi-btn-delete:hover:not(:disabled) {
+  background: rgba(220,53,69,0.07);
+  color: var(--app-primary, #dc3545);
+  border-color: rgba(220,53,69,0.3);
+}
+
+/* ── Vide ─────────────────────────────────────────────────── */
+.trombi-vide {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--app-text-muted, #6c757d);
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 575.98px) {
+  .trombi-grille {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+}

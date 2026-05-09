@@ -1,0 +1,72 @@
+/* ── Wrapper section ──────────────────────────────────────── */
+.activites-recentes-section {
+  /* rien de spécial, héritage du conteneur */
+}
+
+/* ── Carte principale ─────────────────────────────────────── */
+.activites-card {
+  background: #fff;
+  border-radius: var(--app-radius-lg, 0.75rem) !important;
+  box-shadow: var(--app-shadow-sm, 0 1px 4px rgba(0,0,0,0.05));
+  overflow: hidden;
+}
+
+/* ── Etat vide ────────────────────────────────────────────── */
+.activites-empty {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ── Liste timeline ───────────────────────────────────────── */
+.activites-list {
+  padding: 1rem 1.25rem 0;
+}
+
+/* ── Item ─────────────────────────────────────────────────── */
+.activite-item {
+  position: relative;
+}
+
+/* ── Colonne timeline (point + trait) ──────────────────────── */
+.activite-timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 28px;
+}
+
+.activite-dot {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.activite-line {
+  width: 2px;
+  flex-grow: 1;
+  min-height: 12px;
+  background: var(--app-border, #e9ecef);
+  margin: 3px 0;
+}
+
+.activite-item--last .activite-content {
+  padding-bottom: 1rem !important;
+}
+
+/* ── Textes ───────────────────────────────────────────────── */
+.activite-libelle {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--app-text, #1a1d23);
+  line-height: 1.45;
+  padding-top: 4px;
+}
+
+.activite-date {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.75rem;
+  color: var(--app-text-muted, #6c757d);
+}

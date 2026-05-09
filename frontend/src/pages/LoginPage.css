@@ -1,0 +1,123 @@
+/* ============================================================
+   LOGIN PAGE — Institut 2iE
+   ============================================================ */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: var(--app-page-bg, #f4f6f9);
+}
+
+/* ── Logo ─────────────────────────────────────────────────── */
+.login-logo {
+  max-height: 80px;
+  max-width: 220px;
+  object-fit: contain;
+}
+
+/* ── Carte formulaire ────────────────────────────────────── */
+.login-card {
+  background: #fff;
+  border-radius: var(--app-radius-lg, 0.75rem);
+  box-shadow: var(--app-shadow, 0 4px 20px rgba(0,0,0,0.08));
+  padding: 2.25rem 2rem;
+  width: 100%;
+  max-width: 420px;
+}
+
+.login-card-header {
+  margin-bottom: 1.5rem;
+}
+
+.login-card-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--app-text, #1a1d23);
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.02em;
+}
+
+.login-card-subtitle {
+  font-size: 0.875rem;
+  color: var(--app-text-muted, #6c757d);
+  margin: 0;
+}
+
+/* ── Bouton soumettre ────────────────────────────────────── */
+.login-submit-btn {
+  padding: 0.65rem 1.25rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: var(--app-radius, 0.5rem);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.login-submit-btn:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(220, 53, 69, 0.35);
+}
+
+.login-submit-btn:not(:disabled):active {
+  transform: translateY(0);
+}
+
+/* ── Toggle affichage mot de passe ───────────────────────── */
+.login-show-pass-btn {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.65rem;
+  background: none;
+  border: none;
+  color: var(--app-text-muted, #6c757d);
+  cursor: pointer;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.login-show-pass-btn:hover {
+  color: var(--app-primary, #dc3545);
+}
+
+/* ── Pied de carte ───────────────────────────────────────── */
+.login-card-footer {
+  text-align: center;
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  color: var(--app-text-muted, #6c757d);
+}
+
+.login-register-link {
+  color: var(--app-primary, #dc3545);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-register-link:hover {
+  text-decoration: underline;
+  color: var(--app-primary-dark, #b02a37);
+}
+
+/* ── Inputs ──────────────────────────────────────────────── */
+.login-card .form-control {
+  border-radius: var(--app-radius, 0.5rem);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.login-card .form-control:focus {
+  border-color: rgba(220, 53, 69, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.15);
+}
+
+.login-card .form-control::placeholder {
+  color: var(--app-text-placeholder, #adb5bd);
+}
+
+.login-card .form-control:-webkit-autofill,
+.login-card .form-control:-webkit-autofill:focus {
+  box-shadow: 0 0 0 1000px #fff inset !important;
+  -webkit-text-fill-color: var(--app-text, #1a1d23) !important;
+}
